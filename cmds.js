@@ -113,9 +113,9 @@ exports.testCmd = (rl, id) => {
             rl.question(colorize(` ${quiz.question}` + " " , 'red'), respuesta => {
 
                 if(respuesta.toLowerCase().trim() == quiz.answer.toLowerCase().trim()){
-                log(`Correcto`, 'green');
+                log(`Correcta`, 'green');
             }else{
-                log(`Incorrecto`, 'red');
+                log(`Incorrecta`, 'red');
         }
         });
         }catch (error) {
