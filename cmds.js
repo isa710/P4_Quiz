@@ -110,13 +110,13 @@ exports.testCmd = (rl, id) => {
         try {
 
             const quiz = model.getByIndex(id);
-            rl.question(colorize(` ${quiz.question}` + " " , 'red'), respuesta => {
-
-                if(respuesta.toLowerCase().trim() === quiz.answer.toLowerCase().trim()){
-                log(`Respuesta correcta`, 'green');
+            rl.question(colorize(` ${quiz.question}`, 'red'), respuesta => {
+                if((respuesta.toLowerCase().trim()) === (quiz.answer.toLowerCase().trim())){
+                log(`Correcta`, 'green');
             }else{
-                log(`Respuesta incorrecta`, 'red');
+                log(`Incorrecta`, 'red');
         }
+            rl.prompt();
         });
         }catch (error) {
             errorlog(error.message);
